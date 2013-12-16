@@ -1,0 +1,14 @@
+{
+    "name": "connor4312/slimrr",
+    "require": {
+        "slim/slim": "2.*",
+        "mustache/mustache": "2.4.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Connor Peet",
+            "email": "connor@connorpeet.com"
+        }
+    ]
+}
