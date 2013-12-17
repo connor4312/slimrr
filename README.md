@@ -1,7 +1,7 @@
 slimrr
 =======
 
-Got tired of building a whole application just for making static sites non-redundant, so here's a simple app. Files like `name.html` will be rendered as [Mustache](http://mustache.github.io/) templates when `example.com/name` is requested, files ending in `name.php` will be `includ`ed. It's expected that those PHP pages will return their content as a string.
+Got tired of building a whole application just for making static sites non-redundant?  There's an app for that. Files like `name.html` will be rendered as [Mustache](http://mustache.github.io/) templates when `example.com/name` is requested, files ending in `name.php` will be `includ`ed. It's expected that those PHP pages will return their content as a string.
 
 Error files will also be looked for in the pages directory; to add a custom 404 page, for example, make `pages/404.html`.
 
