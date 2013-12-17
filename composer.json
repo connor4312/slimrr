@@ -9,6 +9,7 @@
         {
             "name": "Connor Peet",
             "email": "connor@connorpeet.com"
+<<<<<<< HEAD
         },
         {
             "name": "Andrew Gremp",
@@ -17,6 +18,11 @@
         {
             "name": "Jonathan Kingsley",
             "email": "me@jfkingsley.co.uk"
+=======
+         }, {
+            "name": "Andrew Gremp",
+            "email": "grumpy@cypherservers.com"
+>>>>>>> 0742b1fcdc273c6ad39ac6a64b4db9123c039ef4
         }
     ]
 }
