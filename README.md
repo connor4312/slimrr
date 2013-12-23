@@ -1,4 +1,3 @@
-
 # Slimrr: An easy static site framework
 
 Got tired of building a whole application just for making static sites non-redundant?  There's an app for that, It's fairly simple to use and takes away the fiddly bits.
@@ -8,7 +7,7 @@ Moving on, let's get into it all.
 How to use
 -------------------------
 <br>
-Basic HTML files like `name.html` will be rendered as [Mustache](http://mustache.github.io/) templates when `example.com/name` is requested. Files ending in `name.php` will be `included`. It's expected that those PHP pages will return their content as a string.
+Basic HTML files like `name.html` will be rendered as [Mustache](http://mustache.github.io/) templates when `example.com/name` is requested. Files ending in `name.php` will be `required`. It's expected that those PHP pages will return their content as a string.
 
 Error files will also be looked for in the pages directory; to add a custom 404 page, for example, make `pages/404.html`.
 
