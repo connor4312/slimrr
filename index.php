@@ -1,15 +1,17 @@
 <?php
+session_start();
 
 // Load up composer autoload, and instantiate the application.
 require 'vendor/autoload.php';
 
 $app = new \Slim\Slim;
+$app->config('baseRoute', '/');
 
 // Register a singleton of the Mustache engine, and tell it to cache
-$app->container->singleton('mustache', function () {
-	return new Mustache_Engine(array(
+$app->container->singleton('twig', function () {
+	$loader = new Twig_Loader_Filesystem('pages');
+	return new Twig_Environment($loader, array(
 		'cache' => 'storage',
-		'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__) . '/pages', array('extension' => '.html'))
 	));
 });
 
@@ -18,17 +20,17 @@ function renderTemplate($name, $data = array()) {
 	global $app;
 
 	if (file_exists('config.php')) {
-		$data = (require 'config.php');
+		$data += (require 'config.php');
 	}
 
 	$data += array(
-		'resourceUri' => $app->request->getResourceUri() ?: 'index',
+		'resourceUri' => $app->config('baseRoute') . $app->request->getResourceUri() ?: 'index',
+		'baseUri' => $app->config('baseRoute'),
 		'request' => $app->request
 	);
 
-	return $app->mustache->loadTemplate($name)->render($data);
+	return $app->twig->loadTemplate($name)->render($data);
 }
-
 // Loads a page by the given name/path
 function loadPage($path) {
 	global $app;

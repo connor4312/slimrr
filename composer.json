@@ -2,7 +2,7 @@
     "name": "connor4312/slimrr",
     "require": {
         "slim/slim": "2.*",
-        "mustache/mustache": "2.4.*"
+        "twig/twig": "1.*"
     },
     "license": "MIT",
     "authors": [
